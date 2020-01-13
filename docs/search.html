@@ -10,7 +10,7 @@
     
 
     
-    <title>Mynewt Documentation &mdash; Apache Mynewt latest documentation</title>
+    <title>Search &mdash; Apache Mynewt latest documentation</title>
     
 
     
@@ -39,9 +39,8 @@
     <link rel="stylesheet" href="_static/css/overrides.css" type="text/css" />
           <link rel="index" title="Index"
                 href="genindex.html"/>
-          <link rel="search" title="Search" href="search.html"/>
-      <link rel="top" title="Apache Mynewt latest documentation" href="#"/>
-          <link rel="next" title="Setup &amp; Get Started" href="get_started/index.html"/> 
+          <link rel="search" title="Search" href="#"/>
+      <link rel="top" title="Apache Mynewt latest documentation" href="index.html"/> 
 
     
     <script src="_static/js/modernizr.min.js"></script>
@@ -152,12 +151,8 @@ ga("send", "pageview");
   <div class="container">
     <a href="/documentation/">Docs</a> /
     
-    Mynewt Documentation
+    Search
     
-  <div class="sourcelink">
-    <a href="https://github.com/apache/mynewt-documentation/edit/master/docs/index.rst" class="icon icon-github"
-           rel="nofollow"> Edit on GitHub</a>
-</div>
   </div>
 </div>
         <!-- STARTS CONTAINER -->
@@ -169,7 +164,7 @@ ga("send", "pageview");
 <div class="container-sidebar col-xs-12 col-sm-3">
   <div id="docSidebar" class="sticky-container">
     <div role="search" class="sphinx-search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="#" method="get">
     <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -213,8 +208,8 @@ ga("send", "pageview");
       
         
         
-            <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_started/index.html">Setup &amp; Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
@@ -246,89 +241,23 @@ ga("send", "pageview");
                   <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                    <div itemprop="articleBody">
                     
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-<div class="section" id="welcome-to-apache-mynewt">
-<h2>Welcome to Apache Mynewt<a class="headerlink" href="#welcome-to-apache-mynewt" title="Permalink to this headline">¶</a></h2>
-<p>Apache Mynewt is an operating system that makes it easy to develop
-applications for microcontroller environments where power and cost are
-driving factors. Examples of these devices are connected locks, lights,
-and wearables.</p>
-<p>Microcontroller environments have a number of characteristics that makes
-the operating system requirements for them unique:</p>
-<ul class="simple">
-<li>Low memory footprint: memory on these systems range from 8-16KB (on
-the low end) to 16MB (on the high end).</li>
-<li>Reduced code size: code often runs out of flash, and total available
-code size ranges from 64-128KB to 16-32MB.</li>
-<li>Low processing speed: processor speeds vary from 10-12MHz to
-160-200MHz.</li>
-<li>Low power operation: devices operate in mostly sleeping mode, in
-order to conserve battery power and maximize power usage.</li>
-</ul>
-<p>As more and more devices get connected, these interconnected devices
-perform complex tasks. To perform these tasks, you need low-level
-operational functionality built into the operating system. Typically,
-connected devices built with these microcontrollers perform a myriad of
-functions:</p>
-<ul class="simple">
-<li>Networking Stacks: Bluetooth Low Energy and Thread</li>
-<li>Peripherals: PWM to drive motors, ADCs to measure sensor data, and
-RTCs to keep time.</li>
-<li>Scheduled Processing: actions must happen on a calendared or periodic
-basis.</li>
-</ul>
-<p>Apache Mynewt accomplishes all the above easily, by providing a complete
-operating system for constrained devices, including:</p>
-<ul class="simple">
-<li>A fully open-source Bluetooth Low Energy stack with both Host and
-Controller implementations.</li>
-<li>A pre-emptive, multi-tasking Real Time operating system kernel</li>
-<li>A Hardware Abstraction Layer (HAL) that abstracts the MCU’s
-peripheral functions, allowing developers to easily write
-cross-platform code.</li>
-</ul>
-</div>
-<div class="section" id="newt">
-<h2>Newt<a class="headerlink" href="#newt" title="Permalink to this headline">¶</a></h2>
-<p>In order to provide all this functionality, and operate in an extremely
-low resource environment, Mynewt provides a very fine-grained source
-package management and build system tool, called <em>newt</em>.</p>
-<p>You can install <em>newt</em> for <a class="reference internal" href="newt/install/newt_mac.html"><span class="doc">Mac OS</span></a>,
-<a class="reference internal" href="newt/install/newt_linux.html"><span class="doc">Linux</span></a>, or
-<a class="reference internal" href="newt/install/newt_windows.html"><span class="doc">Windows</span></a>.</p>
-</div>
-<div class="section" id="newt-manager">
-<h2>Newt Manager<a class="headerlink" href="#newt-manager" title="Permalink to this headline">¶</a></h2>
-<p>In order to enable a user to communicate with remote instances of Mynewt
-OS and query, configure, and operate them, Mynewt provides an
-application tool called Newt Manager or <em>newtmgr</em>.</p>
-<p>You can install <em>newtmgr</em> for <a class="reference internal" href="newtmgr/install/install_mac.html"><span class="doc">Mac OS</span></a>,
-<a class="reference internal" href="newtmgr/install/install_linux.html"><span class="doc">Linux</span></a>, or
-<a class="reference internal" href="newtmgr/install/install_windows.html"><span class="doc">Windows</span></a>.</p>
-</div>
-<div class="section" id="build-your-first-mynewt-app-with-newt">
-<h2>Build your first Mynewt App with Newt<a class="headerlink" href="#build-your-first-mynewt-app-with-newt" title="Permalink to this headline">¶</a></h2>
-<p>With the introductions out of the way, now is a good time to <a class="reference internal" href="get_started/index.html"><span class="doc">get set up
-and started</span></a> with your first Mynewt
-application.</p>
-<p>Happy Hacking!</p>
-</div>
-</div>
+  <noscript>
+  <div id="fallback" class="admonition warning">
+    <p class="last">
+      Please activate JavaScript to enable the search
+      functionality.
+    </p>
+  </div>
+  </noscript>
 
+  
+  <div id="search-results">
+  
+  </div>
 
                    </div>
                   </div>
                   
-    <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
-      
-        <a href="get_started/index.html" class="btn btn-neutral float-right" title="Setup &amp; Get Started" accesskey="n">Next: Setup &amp; Get Started <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
-
                 </div>
               </div>
             </div>
@@ -379,11 +308,19 @@ application.</p>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="_static/language_data.js"></script>
+      <script type="text/javascript" src="_static/searchtools.js"></script>
       <script type="text/javascript" src="_static/js/bootstrap-3.0.3.min.js"></script>
       <script type="text/javascript" src="_static/js/affix.js"></script>
       <script type="text/javascript" src="_static/js/main.js"></script>
 
+  
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script type="text/javascript" id="searchindexloader"></script>
    
+
 
   </body>
 </html>

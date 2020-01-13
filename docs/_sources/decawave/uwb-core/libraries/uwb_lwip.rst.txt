@@ -1,0 +1,11 @@
+uwb_lwip
+========
+
+1. lwIP is a light-weight implementation of the TCP/IP protocol suite.
+
+2. Refer to the `lwip_tx <https://github.com/Decawave/uwb-apps/tree/master/apps/lwip_ping_tx/>`_ and `lwip_rx <https://github.com/Decawave/uwb-apps/tree/master/apps/lwip_ping_rx>`_ for the usage of lwip apps.
+
+API
+---
+
+.. doxygenfile:: lib/uwb_lwip/include/uwb_lwip/uwb_lwip.h

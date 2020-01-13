@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    <title>twr_tdma &mdash; Apache Mynewt latest documentation</title>
+    
+
+    
+    
+      <link rel="shortcut icon" href="../../_static/mynewt-logo-only-newt32x32.png"/>
+    
+
+    
+
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+    
+      <link rel="stylesheet" href="../../_static/css/sphinx_theme.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/bootstrap-3.0.3.min.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/v2.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/restructuredtext.css" type="text/css" />
+    
+
+    
+
+    <link rel="stylesheet" href="../../_static/css/overrides.css" type="text/css" />
+          <link rel="index" title="Index"
+                href="../../genindex.html"/>
+          <link rel="search" title="Search" href="../../search.html"/>
+      <link rel="top" title="Apache Mynewt latest documentation" href="../../index.html"/>
+          <link rel="up" title="UWB-APPS" href="uwb-apps.html"/>
+          <link rel="next" title="twr_nranges_tdma" href="twr_nranges_tdma.html"/>
+          <link rel="prev" title="twr_aloha" href="twr_aloha.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+	i["GoogleAnalyticsObject"] = r;
+	(i[r] =
+		i[r] ||
+		function() {
+			(i[r].q = i[r].q || []).push(arguments);
+		}),
+		(i[r].l = 1 * new Date());
+	(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a, m);
+})(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+
+ga("create", "UA-72162311-1", "auto");
+ga("send", "pageview");
+</script>
+    
+
+  </head>
+
+  <body class="not-front page-documentation" role="document" >
+    <div id="wrapper">
+      <div class="container">
+    <div id="banner" class="row v2-main-banner">
+        <a class="logo-cell" href="/">
+            <img class="logo" src="../../_static/img/logo.png">
+        </a>
+        <div class="tagline-cell">
+            <h4 class="tagline">An OS to build, deploy and securely manage billions of devices</h4>
+        </div>
+        <div class="news-cell">
+            <div class="well">
+                <h4>Latest News:</h4> <a href="/download">Apache Mynewt 1.7.0, Apache NimBLE 1.2.0 </a> released (August 4, 2019)
+            </div>
+        </div>
+    </div>
+</div>
+      
+<header>
+    <nav id="navbar" class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <!-- Collapsed navigation -->
+            <div class="navbar-header">
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Expanded navigation -->
+            <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/"><i class="fa fa-home" style="font-size: larger;"></i></a>
+                    </li>
+                    <li class="important">
+                        <a href="/quick-start/">Quick Start</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/talks/">Talks</a>
+                    </li>
+                    <li class="active">
+                        <a href="/documentation/">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="/download/">Download</a>
+                    </li>
+                    <li>
+                        <a href="/community/">Community</a>
+                    </li>
+                    <li>
+                        <a href="/events/">Events</a>
+                    </li>
+                </ul>
+
+                <!-- Search, Navigation and Repo links -->
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+      <!-- STARTS MAIN CONTENT -->
+      <div id="main-content">
+        
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/documentation/">Docs</a> /
+    
+      <a href="../decawave.html">Decawave-UWB User Guide</a> /
+    
+      <a href="uwb-apps.html">UWB-APPS</a> /
+    
+    twr_tdma
+    
+  <div class="sourcelink">
+    <a href="https://github.com/apache/mynewt-documentation/edit/master/docs/decawave/uwb-apps/twr_tdma.rst" class="icon icon-github"
+           rel="nofollow"> Edit on GitHub</a>
+</div>
+  </div>
+</div>
+        <!-- STARTS CONTAINER -->
+        <div class="container">
+          <!-- STARTS .content -->
+          <div id="content" class="row">
+            
+            <!-- STARTS .container-sidebar -->
+<div class="container-sidebar col-xs-12 col-sm-3">
+  <div id="docSidebar" class="sticky-container">
+    <div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    <!-- Note: only works when deployed -->
+<select class="form-control" onchange="if (this.value) window.location.href=this.value">
+  <option value="/latest" selected>
+    Version: latest
+  </option>
+  <option value="/v1_7_0" >
+    Version: 1.7.0
+  </option>
+  <option value="/v1_6_0" >
+    Version: 1.6.0
+  </option>
+  <option value="/v1_5_0" >
+    Version: 1.5.0
+  </option>
+  <option value="/v1_4_0" >
+    Version: 1.4.0
+  </option>
+  <option value="/v1_3_0/os/introduction" >
+    Version: 1.3.0
+  </option>
+  <option value="/v1_2_0/os/introduction" >
+    Version: 1.2.0
+  </option>
+  <option value="/v1_1_0/os/introduction" >
+    Version: 1.1.0
+  </option>
+  <option value="/v1_0_0/os/introduction" >
+    Version: 1.0.0
+  </option>
+  <option value="/v0_9_0/os/introduction" >
+    Version: 0.9.0
+  </option>
+</select>
+    <div class="region region-sidebar">
+      <div class="docs-menu">
+      
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started/index.html">Setup &amp; Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../external_links.html">Third-party Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/os_user_guide.html">OS User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/docs/index.html">BLE User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../decawave.html">Decawave-UWB User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uwb-core/uwb-core.html">uwb-core</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="uwb-apps.html">uwb-apps</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="twr_aloha.html">twr_aloha</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">twr_tdma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twr_nranges_tdma.html">twr_nranges_tdma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lwip_ping.html">lwip_ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ota_over_uwb.html">ota_over_uwb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtdoa.html">rtdoa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openthread.html">openthread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="listener.html">listener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopback.html">loopback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">matlab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../newt/index.html">Newt Tool Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../newtmgr/index.html">Newt Manager Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mynewt_faq/index.html">Mynewt FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">Appendix</a></li>
+</ul>
+
+        
+      
+      </div>
+    </div>
+  </div>
+  <!-- ENDS STICKY CONTAINER -->
+</div>
+<!-- ENDS .container-sidebar -->
+
+            <div class="col-xs-12 col-sm-9">
+              
+
+              
+              <div class="">
+                <div class="rst-content">
+                  <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                   <div itemprop="articleBody">
+                    
+  <div class="section" id="twr-tdma">
+<h1>twr_tdma<a class="headerlink" href="#twr-tdma" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="decawave-twr-tdma-example">
+<h2>Decawave TWR_TDMA Example<a class="headerlink" href="#decawave-twr-tdma-example" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="overview">
+<h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The twr_node_tdma and twr_tag_tdma illustrate the capabilities of the underlying decawave-uwb-core library. The default behavior divides the TDMA_PERIOD into TDMA_NSLOTS and allocates slots to a single ranging task. Clock calibration and timescale compensation are enabled within the twr_tag_tdma application; this has the advantage of permitting single-sided two range exchange thus reducing the channel utilization.</p>
+<p>Another advantege of wireless synchronization is the ability to turn-on transeiver is a just-in-time fashion thereby reducing the power comsumption. In these examples transeiver is turned on for approximatly 190 usec per each slot.</p>
+<div class="section" id="under-the-hood">
+<h3>Under-the-hood:<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h3>
+<p>The decawave-uwb-core driver implements the MAC layers and exports a MAC extension interface for additional services. One such service is ranging (./lib/rng). The ranging services through the extension interface expose callback to various events within the ranging process. One such callback is the complete_cb which marks the successful completion of the range request. In these examples, we attach to the complete_cb and perform subsequent processing. The available callbacks are defined in the struct uwb_mac_interface which is defined in uwb.h</p>
+<p>This example also illustrates the clock calibration packet (CCP) and time division multiple access (TDMA) services. Both of which also bind to the MAC interface. In a synchronous network, the CCP service establishes the metronome through superframes transmissions. All epochs are derived from these superframes. The TDMA service divides the superframe period into slots and schedules event about each slot. The transceiver controls the precise timing of all frames to the microsecond. The operating system loosely schedules an event in advance of the desired epoch and this event issues a delay_start request to the transceiver. This loose/tight timing relationship reduces the timing requirements on the OS and permits the dw1000 to operate at optimum efficiency.</p>
+<ol class="arabic simple">
+<li>To erase the default flash image that shipped with the DWM1001 boards.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> JLinkExe -device nRF52 -speed <span class="m">4000</span> -if SWD
+<span class="go">J-Link&gt;erase</span>
+<span class="go">J-Link&gt;exit</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>On 1st dwm1001-dev board build the TDMA node (twr_node_tdma) applications for the DWM1001 module.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target create twr_node_tdma</span>
+<span class="go">newt target set twr_node_tdma app=apps/twr_node_tdma</span>
+<span class="go">newt target set twr_node_tdma bsp=@decawave-uwb-core/hw/bsp/dwm1001</span>
+<span class="go">newt target set twr_node_tdma build_profile=debug</span>
+<span class="go">newt target amend twr_node_tdma syscfg=LOG_LEVEL=1:UWBCFG_DEF_ROLE=&#39;&quot;0x1&quot;&#39;:BLE_ENABLED=1</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend twr_node_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART_BAUD</span><span class="o">=</span><span class="m">460800</span>:CONSOLE_UART<span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>:UWBCFG_DEF_FRAME_FILTER<span class="o">=</span><span class="s1">&#39;&quot;0x00F&quot;&#39;</span>
+<span class="go">newt run twr_node_tdma 0</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>On 2nd dwm1001-dev board build the TDMA tag (twr_tag_tdma) applications for the DWM1001 module.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target create twr_tag_tdma</span>
+<span class="go">newt target set twr_tag_tdma app=apps/twr_tag_tdma</span>
+<span class="go">newt target set twr_tag_tdma bsp=@decawave-uwb-core/hw/bsp/dwm1001</span>
+<span class="go">newt target set twr_tag_tdma build_profile=debug</span>
+<span class="go">newt target amend twr_node_tdma syscfg=BLE_ENABLED=1</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend twr_tag_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART_BAUD</span><span class="o">=</span><span class="m">460800</span>:CONSOLE_UART<span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="go">newt run twr_tag_tdma 0</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>On the console you should see the following expected result.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&quot;utime&quot;: 9484006864249, &quot;wcs&quot;: [9483617024080,687524001872,8752525324842,687524001872], &quot;skew&quot;: 13752215634709839872}</span>
+<span class="go">{&quot;utime&quot;: 9484254696807, &quot;twr&quot;: {&quot;rng&quot;: &quot;1.071&quot;,&quot;uid&quot;: &quot;d22d&quot;},&quot;uid&quot;: &quot;55a6&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.562&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 9484684610480, &quot;twr&quot;: {&quot;rng&quot;: &quot;1.061&quot;,&quot;uid&quot;: &quot;d22d&quot;},&quot;uid&quot;: &quot;55a6&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.493&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 9485113714163, &quot;twr&quot;: {&quot;rng&quot;: &quot;1.064&quot;,&quot;uid&quot;: &quot;d22d&quot;},&quot;uid&quot;: &quot;55a6&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.416&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 9485543643708, &quot;twr&quot;: {&quot;rng&quot;: &quot;1.079&quot;,&quot;uid&quot;: &quot;d22d&quot;},&quot;uid&quot;: &quot;55a6&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.593&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 9485972719232, &quot;twr&quot;: {&quot;rng&quot;: &quot;1.082&quot;,&quot;uid&quot;: &quot;d22d&quot;},&quot;uid&quot;: &quot;55a6&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.653&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li>For PDOA on DWM1002 module.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target create dwm1002_twr_node_tdma</span>
+<span class="go">newt target set dwm1002_twr_node_tdma app=apps/twr_node_tdma</span>
+<span class="go">newt target set dwm1002_twr_node_tdma bsp=@decawave-uwb-core/hw/bsp/dwm1002</span>
+<span class="go">newt target set dwm1002_twr_node_tdma build_profile=debug</span>
+<span class="go">newt target amend dwm1002_twr_node_tdma syscfg=UWB_DEVICE_0=1:UWB_DEVICE_1=1:USE_DBLBUFFER=0:CIR_ENABLED=1:LOG_LEVEL=1:UWBCFG_DEF_ROLE=&#39;&quot;0x1&quot;&#39;</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend dwm1002_twr_node_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART</span><span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="go">newt run dwm1002_twr_node_tdma 0</span>
+
+<span class="go">newt target create dwm1003_twr_tag_tdma</span>
+<span class="go">newt target set dwm1003_twr_tag_tdma app=apps/twr_tag_tdma</span>
+<span class="go">newt target set dwm1003_twr_tag_tdma bsp=@decawave-uwb-core/hw/bsp/dwm1003</span>
+<span class="go">newt target set dwm1003_twr_tag_tdma build_profile=debug</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend dwm1003_twr_tag_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART</span><span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="go">newt run dwm1003_twr_tag_tdma 0</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li>On the console you should see the following expected result.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&quot;utime&quot;: 15046841179648, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.397&quot;,&quot;1.662&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.178&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15047270679552, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.388&quot;,&quot;1.798&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.644&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15047699727872, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.408&quot;,&quot;1.565&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.651&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15048129227264, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.430&quot;,&quot;1.390&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.516&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15048558718976, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.381&quot;,&quot;1.075&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-78.911&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15048988214272, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.402&quot;,&quot;1.595&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.438&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15049417705984, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.412&quot;,&quot;1.637&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.239&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+<span class="go">{&quot;utime&quot;: 15049847641088, &quot;twr&quot;: {&quot;raz&quot;: [&quot;5.440&quot;,&quot;1.924&quot;,&quot;null&quot;],&quot;uid&quot;: &quot;56a5&quot;},&quot;uid&quot;: &quot;4dad&quot;, &quot;diag&quot;: {&quot;rssi&quot;: &quot;-79.339&quot;,&quot;los&quot;: &quot;1.000&quot;}}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li>For PDOA on board with DW3000 module.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target create nucleo-f429zi_B0_twr_node_tdma</span>
+<span class="go">newt target set nucleo-f429zi_B0_twr_node_tdma app=apps/twr_node_tdma</span>
+<span class="go">newt target set nucleo-f429zi_B0_twr_node_tdma bsp=@decawave-uwb-core/hw/bsp/nucleo-f429zi_B0</span>
+<span class="go">newt target set nucleo-f429zi_B0_twr_node_tdma build_profile=debug</span>
+<span class="go">newt target amend nucleo-f429zi_B0_twr_node_tdma syscfg=UWB_DEVICE_0=1:USE_DBLBUFFER=0:LOG_LEVEL=1:UWBCFG_DEF_ROLE=&#39;&quot;0x1&quot;&#39;</span>
+<span class="go">newt target amend nucleo-f429zi_B0_twr_node_tdma    syscfg=UWBCFG_DEF_RX_PDOA_MODE=&#39;&quot;3&quot;&#39;:UWBCFG_DEF_RX_CIPHER_MODE=&#39;&quot;1sdc&quot;&#39;:UWBCFG_DEF_TX_PREAM_LEN=&#39;&quot;64&quot;&#39;:UWBCFG_DEF_RX_SFD_TYPE=&#39;&quot;1&quot;&#39;:TWR_DS_EXT_RX_TIMEOUT=0x40</span>
+<span class="gp">#</span> If the config seems <span class="s2">&quot;stuck&quot;</span> you can force it to change with the line below. You may need a different <span class="o">(</span>random<span class="o">)</span> value at the end
+<span class="go">newt target amend nucleo-f429zi_B0_twr_node_tdma syscfg=CONFIG_FCB_MAGIC=0x12345678</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend nucleo-f429zi_B0_twr_node_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART</span><span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="gp">#</span> Uncomment next line <span class="k">if</span> the aoa angle appears inverted <span class="o">(</span>Antenna facing other way<span class="o">)</span>
+<span class="gp">#</span>newt target amend nucleo-f429zi_B0_twr_node_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">AOA_ANGLE_INVERT</span><span class="o">=</span><span class="m">1</span>
+<span class="go">newt run nucleo-f429zi_B0_twr_node_tdma 0</span>
+
+<span class="go">newt target create nucleo-f429zi_B0_twr_tag_tdma</span>
+<span class="go">newt target set nucleo-f429zi_B0_twr_tag_tdma app=apps/twr_tag_tdma</span>
+<span class="go">newt target set nucleo-f429zi_B0_twr_tag_tdma bsp=@decawave-uwb-core/hw/bsp/nucleo-f429zi_B0</span>
+<span class="go">newt target set nucleo-f429zi_B0_twr_tag_tdma build_profile=debug</span>
+<span class="go">newt target amend nucleo-f429zi_B0_twr_tag_tdma syscfg=UWBCFG_DEF_RX_CIPHER_MODE=&#39;&quot;1sdc&quot;&#39;:UWBCFG_DEF_TX_PREAM_LEN=&#39;&quot;64&quot;&#39;:UWBCFG_DEF_RX_SFD_TYPE=&#39;&quot;1&quot;&#39;:TWR_DS_EXT_RX_TIMEOUT=0x40</span>
+<span class="gp">#</span> If the config seems <span class="s2">&quot;stuck&quot;</span> you can force it to change with the line below. You may need a different <span class="o">(</span>random<span class="o">)</span> value at the end
+<span class="go">newt target amend nucleo-f429zi_B0_twr_tag_tdma syscfg=CONFIG_FCB_MAGIC=0x12345678</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend nucleo-f429zi_B0_twr_tag_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART</span><span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="go">newt run nucleo-f429zi_B0_twr_tag_tdma 0</span>
+
+<span class="go">minicom -D /dev/tty.usbmodem14403 -b 115200</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li>For non-PDOA on board with DW3000 on nRF52.</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target create pca10056_dw3000_B0_boot</span>
+<span class="go">newt target set pca10056_dw3000_B0_boot app=@mcuboot/boot/mynewt</span>
+<span class="go">newt target set pca10056_dw3000_B0_boot bsp=@decawave-uwb-core/hw/bsp/pca10056_dw3000_B0</span>
+<span class="go">newt target set pca10056_dw3000_B0_boot build_profile=optimized</span>
+<span class="go">newt build pca10056_dw3000_B0_boot</span>
+<span class="go">newt load pca10056_dw3000_B0_boot</span>
+
+
+<span class="go">newt target create pca10056_dw3000_B0_twr_node_tdma</span>
+<span class="go">newt target set pca10056_dw3000_B0_twr_node_tdma app=apps/twr_node_tdma</span>
+<span class="go">newt target set pca10056_dw3000_B0_twr_node_tdma bsp=@decawave-uwb-core/hw/bsp/pca10056_dw3000_B0</span>
+<span class="go">newt target set pca10056_dw3000_B0_twr_node_tdma build_profile=debug</span>
+<span class="go">newt target amend pca10056_dw3000_B0_twr_node_tdma syscfg=UWB_DEVICE_0=1:USE_DBLBUFFER=0:LOG_LEVEL=1:UWBCFG_DEF_ROLE=&#39;&quot;0x1&quot;&#39;</span>
+<span class="gp">#</span>newt target amend pca10056_dw3000_B0_twr_node_tdma    <span class="nv">syscfg</span><span class="o">=</span><span class="nv">UWBCFG_DEF_RX_PDOA_MODE</span><span class="o">=</span><span class="s1">&#39;&quot;3&quot;&#39;</span>:UWBCFG_DEF_RX_CIPHER_MODE<span class="o">=</span><span class="s1">&#39;&quot;1sdc&quot;&#39;</span>:UWBCFG_DEF_TX_PREAM_LEN<span class="o">=</span><span class="s1">&#39;&quot;64&quot;&#39;</span>:UWBCFG_DEF_RX_SFD_MODE<span class="o">=</span><span class="s1">&#39;&quot;1&quot;&#39;</span>:TWR_DS_EXT_RX_TIMEOUT<span class="o">=</span>0x40
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="go">newt target amend pca10056_dw3000_B0_twr_node_tdma syscfg=CONSOLE_UART_BAUD=115200:CONSOLE_UART=1:CONSOLE_RTT=0</span>
+<span class="gp">#</span> Uncomment next line <span class="k">if</span> the aoa angle appears inverted <span class="o">(</span>Antenna facing other way<span class="o">)</span>
+<span class="gp">#</span>newt target amend pca10056_dw3000_B0_twr_node_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">AOA_ANGLE_INVERT</span><span class="o">=</span><span class="m">1</span>
+<span class="go">newt run pca10056_dw3000_B0_twr_node_tdma 0</span>
+
+<span class="go">newt target create pca10056_dw3000_B0_twr_tag_tdma</span>
+<span class="go">newt target set pca10056_dw3000_B0_twr_tag_tdma app=apps/twr_tag_tdma</span>
+<span class="go">newt target set pca10056_dw3000_B0_twr_tag_tdma bsp=@decawave-uwb-core/hw/bsp/pca10056_dw3000_B0</span>
+<span class="go">newt target set pca10056_dw3000_B0_twr_tag_tdma build_profile=debug</span>
+<span class="gp">#</span>newt target amend pca10056_dw3000_B0_twr_tag_tdma <span class="nv">syscfg</span><span class="o">=</span><span class="nv">UWBCFG_DEF_RX_CIPHER_MODE</span><span class="o">=</span><span class="s1">&#39;&quot;1sdc&quot;&#39;</span>:UWBCFG_DEF_TX_PREAM_LEN<span class="o">=</span><span class="s1">&#39;&quot;64&quot;&#39;</span>:UWBCFG_DEF_RX_SFD_MODE<span class="o">=</span><span class="s1">&#39;&quot;1&quot;&#39;</span>:TWR_DS_EXT_RX_TIMEOUT<span class="o">=</span>0x40
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="go">newt target amend pca10056_dw3000_B0_twr_tag_tdma syscfg=CONSOLE_UART_BAUD=115200:CONSOLE_UART=1:CONSOLE_RTT=0</span>
+<span class="go">newt run pca10056_dw3000_B0_twr_tag_tdma 0</span>
+
+<span class="go">minicom -D /dev/tty.usbmodem14403 -b 115200</span>
+</pre></div>
+</div>
+<p>Note for pdoa on the dw3000 to work (in this example) the cipher mode must be “1sdc” and the
+preamble_length (and the cipher preamble length) should be “64”. The node must also have pdoa_mode
+set to “1”.</p>
+<ol class="arabic simple" start="9">
+<li>Using TWR-SS-ACK range model on a board with long/irregular interrupt latency</li>
+</ol>
+<p>The TWR-SS-ACK range model uses the hardware auto-ack capability to speed up the
+initial respons to a request. A follow up frame is then sent with the tx-time
+of the ack itself.
+Auto-ack requires that the frame-filter is enabled:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target amend &lt;target_name&gt; syscfg=UWBCFG_DEF_FRAME_FILTER=&#39;&quot;0x00F&quot;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="visualisation">
+<h3>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">¶</a></h3>
+<p>If you have node-red installed you can import the flow in the node-red folder. Note that
+it uses RTT to connect to the dwm1002 board so you have to be still running the
+<code class="docutils literal notranslate"><span class="pre">newt</span> <span class="pre">run</span> <span class="pre">twr_node_tdma</span> <span class="pre">0</span></code> command on the same computer for it to work.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Install nodejs and node-red
+<span class="go">sudo apt-get install -y nodejs</span>
+<span class="go">sudo npm install -g --unsafe-perm node-red</span>
+<span class="gp">#</span> Once installed, run node-red on the commandline:
+<span class="go">node-red</span>
+</pre></div>
+</div>
+<p>The palette of node-red modules needs to be updated to have
+<strong>node-red-dashboard</strong> installed:</p>
+<ol class="arabic simple">
+<li>In the top right corner menu select <strong>Manage palette</strong></li>
+<li>Click on the <strong>Install</strong> tab</li>
+<li>Search for and install <strong>node-red-dashboard</strong></li>
+</ol>
+<p>Once the prerequisites are setup, in node-red, open up the menu in the top right corner, select import,
+clipboard, and select file to import.
+Navigate to the node-red directory and select the pdoa_viewer.json file. Or, simply drag and drop the file
+on the node-red webpage.
+Select deploy. Done.</p>
+</div>
+</div>
+</div>
+
+
+                   </div>
+                  </div>
+                  
+    <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+      
+        <a href="twr_nranges_tdma.html" class="btn btn-neutral float-right" title="twr_nranges_tdma" accesskey="n">Next: twr_nranges_tdma <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="twr_aloha.html" class="btn btn-neutral" title="twr_aloha" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous: twr_aloha</a>
+      
+    </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- ENDS CONTENT SECTION -->
+          </div>
+          <!-- ENDS .content -->
+        </div>
+      </div>
+      <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+          
+              <p class="copyright">Apache Mynewt is available under Apache License, version 2.0.</p>
+          
+      </div>
+      <div class="col-xs-12">
+          <div class="logos">
+              <img src="../../_static/img/asf_logo_wide_small.png" alt="Apache" title="Apache">
+              <small class="footnote">
+                Apache Mynewt, Mynewt, Apache, the Apache feather logo, and the Apache Mynewt project logo are either
+                registered trademarks or trademarks of the Apache Software Foundation in the United States and other countries.
+              </small>
+              <a href="">
+                <img src="../../_static/img/add_to_slack.png" alt="Slack Icon" title="Join our Slack Community" />
+              </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #wrapper -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/js/bootstrap-3.0.3.min.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+
+   
+
+  </body>
+</html>

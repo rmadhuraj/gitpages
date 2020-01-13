@@ -1,0 +1,10 @@
+uwb_ccp
+=============
+Clock Calibration Packet (CCP) Service
+--------------------------------------
+The CCP service is the metronome with the system and defines the superframe events. The CCP service has a master and slave profiles. CCP is used in conjunction with Wireless Clock Synchronization (WCS) library and the TDMA library.
+
+API
+---
+
+.. doxygenfile:: lib/uwb_ccp/include/uwb_ccp/uwb_ccp.h
