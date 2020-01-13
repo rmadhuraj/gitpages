@@ -1,0 +1,10 @@
+Hardware
+=========
+This section introduces about various hardware platforms, sensors, decawave chips and corresponding drivers.
+
+
+.. toctree::
+   :maxdepth: 1
+  
+   platforms <platforms/platforms>
+   drivers <drivers/drivers>

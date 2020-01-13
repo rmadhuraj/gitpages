@@ -1,0 +1,12 @@
+Platforms
+=================
+Overview
+````````````
+The supportive platforms are as follows
+
+.. toctree::
+   :maxdepth: 1
+  
+   dwm1001 <dwm1001>
+   dwm1002 <dwm1002>
+   dwm1003 <dwm1003>
