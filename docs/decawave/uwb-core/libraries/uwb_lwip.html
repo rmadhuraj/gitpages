@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    <title>uwb_lwip &mdash; Apache Mynewt latest documentation</title>
+    
+
+    
+    
+      <link rel="shortcut icon" href="../../../_static/mynewt-logo-only-newt32x32.png"/>
+    
+
+    
+
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+    
+      <link rel="stylesheet" href="../../../_static/css/sphinx_theme.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/bootstrap-3.0.3.min.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/v2.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/restructuredtext.css" type="text/css" />
+    
+
+    
+
+    <link rel="stylesheet" href="../../../_static/css/overrides.css" type="text/css" />
+          <link rel="index" title="Index"
+                href="../../../genindex.html"/>
+          <link rel="search" title="Search" href="../../../search.html"/>
+      <link rel="top" title="Apache Mynewt latest documentation" href="../../../index.html"/>
+          <link rel="up" title="Libraries" href="libraries.html"/>
+          <link rel="next" title="uwb_pan" href="uwb_pan.html"/>
+          <link rel="prev" title="rtdoa" href="rtdoa.html"/> 
+
+    
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+	i["GoogleAnalyticsObject"] = r;
+	(i[r] =
+		i[r] ||
+		function() {
+			(i[r].q = i[r].q || []).push(arguments);
+		}),
+		(i[r].l = 1 * new Date());
+	(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a, m);
+})(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+
+ga("create", "UA-72162311-1", "auto");
+ga("send", "pageview");
+</script>
+    
+
+  </head>
+
+  <body class="not-front page-documentation" role="document" >
+    <div id="wrapper">
+      <div class="container">
+    <div id="banner" class="row v2-main-banner">
+        <a class="logo-cell" href="/">
+            <img class="logo" src="../../../_static/img/logo.png">
+        </a>
+        <div class="tagline-cell">
+            <h4 class="tagline">An OS to build, deploy and securely manage billions of devices</h4>
+        </div>
+        <div class="news-cell">
+            <div class="well">
+                <h4>Latest News:</h4> <a href="/download">Apache Mynewt 1.7.0, Apache NimBLE 1.2.0 </a> released (August 4, 2019)
+            </div>
+        </div>
+    </div>
+</div>
+      
+<header>
+    <nav id="navbar" class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <!-- Collapsed navigation -->
+            <div class="navbar-header">
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Expanded navigation -->
+            <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/"><i class="fa fa-home" style="font-size: larger;"></i></a>
+                    </li>
+                    <li class="important">
+                        <a href="/quick-start/">Quick Start</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/talks/">Talks</a>
+                    </li>
+                    <li class="active">
+                        <a href="/documentation/">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="/download/">Download</a>
+                    </li>
+                    <li>
+                        <a href="/community/">Community</a>
+                    </li>
+                    <li>
+                        <a href="/events/">Events</a>
+                    </li>
+                </ul>
+
+                <!-- Search, Navigation and Repo links -->
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+      <!-- STARTS MAIN CONTENT -->
+      <div id="main-content">
+        
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/documentation/">Docs</a> /
+    
+      <a href="../../decawave.html">Decawave-UWB User Guide</a> /
+    
+      <a href="../uwb-core.html">UWB-CORE</a> /
+    
+      <a href="libraries.html">Libraries</a> /
+    
+    uwb_lwip
+    
+  <div class="sourcelink">
+    <a href="https://github.com/apache/mynewt-documentation/edit/master/docs/decawave/uwb-core/libraries/uwb_lwip.rst" class="icon icon-github"
+           rel="nofollow"> Edit on GitHub</a>
+</div>
+  </div>
+</div>
+        <!-- STARTS CONTAINER -->
+        <div class="container">
+          <!-- STARTS .content -->
+          <div id="content" class="row">
+            
+            <!-- STARTS .container-sidebar -->
+<div class="container-sidebar col-xs-12 col-sm-3">
+  <div id="docSidebar" class="sticky-container">
+    <div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    <!-- Note: only works when deployed -->
+<select class="form-control" onchange="if (this.value) window.location.href=this.value">
+  <option value="/latest" selected>
+    Version: latest
+  </option>
+  <option value="/v1_7_0" >
+    Version: 1.7.0
+  </option>
+  <option value="/v1_6_0" >
+    Version: 1.6.0
+  </option>
+  <option value="/v1_5_0" >
+    Version: 1.5.0
+  </option>
+  <option value="/v1_4_0" >
+    Version: 1.4.0
+  </option>
+  <option value="/v1_3_0/os/introduction" >
+    Version: 1.3.0
+  </option>
+  <option value="/v1_2_0/os/introduction" >
+    Version: 1.2.0
+  </option>
+  <option value="/v1_1_0/os/introduction" >
+    Version: 1.1.0
+  </option>
+  <option value="/v1_0_0/os/introduction" >
+    Version: 1.0.0
+  </option>
+  <option value="/v0_9_0/os/introduction" >
+    Version: 0.9.0
+  </option>
+</select>
+    <div class="region region-sidebar">
+      <div class="docs-menu">
+      
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../decawave.html">Decawave-UWB User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../uwb-core.html">uwb-core</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hardware/hardware.html">Hardware</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="libraries.html">Libraries</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="two_way_ranging.html">TwoWayRanging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tdma.html">TDMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uwb_ccp.html">UWB_CCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openthread.html">Openthread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rtdoa.html">RTDOA</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">UWB lwIP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uwb_pan.html">UWB PAN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uwb_transport.html">UWB Transport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uwb_wcs.html">UWB WCS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../uwb-apps/uwb-apps.html">uwb-apps</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      
+      </div>
+    </div>
+  </div>
+  <!-- ENDS STICKY CONTAINER -->
+</div>
+<!-- ENDS .container-sidebar -->
+
+            <div class="col-xs-12 col-sm-9">
+              
+
+              
+              <div class="">
+                <div class="rst-content">
+                  <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                   <div itemprop="articleBody">
+                    
+  <div class="section" id="uwb-lwip">
+<h1>uwb_lwip<a class="headerlink" href="#uwb-lwip" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>lwIP is a light-weight implementation of the TCP/IP protocol suite.</li>
+<li>Refer to the <a class="reference external" href="https://github.com/Decawave/uwb-apps/tree/master/apps/lwip_ping_tx/">lwip_tx</a> and <a class="reference external" href="https://github.com/Decawave/uwb-apps/tree/master/apps/lwip_ping_rx">lwip_rx</a> for the usage of lwip apps.</li>
+</ol>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p>lwip service </p>
+<p><p>This is the lwip base class which utilizes the functions to do the configurations related to lwip layer based on dependencies. </p>
+<dl class="docutils">
+<dt><strong>Author</strong></dt>
+<dd>paul kettle </dd>
+<dt><strong>Date</strong></dt>
+<dd>2018</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="typedef">
+<dt id="c.uwb_lwip_config_t">
+<span class="target" id="uwb__lwip_8h_1a5fd5c202836a4857b37c7e601c0aba4f"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c._uwb_lwip_config_t" title="_uwb_lwip_config_t">_uwb_lwip_config_t</a> <code class="descname">uwb_lwip_config_t</code><a class="headerlink" href="#c.uwb_lwip_config_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip config parameters. </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.uwb_lwip_modes_t">
+<span class="target" id="uwb__lwip_8h_1a6835d7ea7a82e8ac03bb378a03d0bfd9"></span><em class="property">typedef </em>enum <a class="reference internal" href="#c._uwb_lwip_modes_t" title="_uwb_lwip_modes_t">_uwb_lwip_modes_t</a> <code class="descname">uwb_lwip_modes_t</code><a class="headerlink" href="#c.uwb_lwip_modes_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip modes. </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.uwb_lwip_status_t">
+<span class="target" id="uwb__lwip_8h_1a2e0a6c9ad860c32302ab71fd5995442e"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a> <code class="descname">uwb_lwip_status_t</code><a class="headerlink" href="#c.uwb_lwip_status_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip status parameters. </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.uwb_lwip_instance_t">
+<span class="target" id="uwb__lwip_8h_1aab6ef3149e90c3386bd4d124fbde13fa"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c._uwb_lwip_instance_t" title="_uwb_lwip_instance_t">_uwb_lwip_instance_t</a> <code class="descname">uwb_lwip_instance_t</code><a class="headerlink" href="#c.uwb_lwip_instance_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip instance parameters. </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.uwb_lwip_cb_t">
+<span class="target" id="uwb__lwip_8h_1a564f0d6e4162e48f16121bde73ead477"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c._uwb_lwip_cb_t" title="_uwb_lwip_cb_t">_uwb_lwip_cb_t</a> <code class="descname">uwb_lwip_cb_t</code><a class="headerlink" href="#c.uwb_lwip_cb_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip callback. </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.uwb_lwip_context_t">
+<span class="target" id="uwb__lwip_8h_1a8085fb3fc2c5fc07a26d5e04934b1da3"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c._uwb_lwip_context_t" title="_uwb_lwip_context_t">_uwb_lwip_context_t</a> <code class="descname">uwb_lwip_context_t</code><a class="headerlink" href="#c.uwb_lwip_context_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip context parameters. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="enum">
+<dt id="c._uwb_lwip_modes_t">
+<span class="target" id="uwb__lwip_8h_1a0a39543eeb9a0e683fcbb343437a90f8"></span><code class="descname">_uwb_lwip_modes_t</code><a class="headerlink" href="#c._uwb_lwip_modes_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lwip modes. </p>
+<p><em>Values:</em></p>
+<dl class="enumvalue">
+<dt id="c.LWIP_BLOCKING">
+<span class="target" id="uwb__lwip_8h_1a0a39543eeb9a0e683fcbb343437a90f8a6fc1da6eab1a932434eacef69deaacf6"></span><code class="descname">LWIP_BLOCKING</code><a class="headerlink" href="#c.LWIP_BLOCKING" title="Permalink to this definition">¶</a></dt>
+<dd><p>lwip blocking mode </p>
+</dd></dl>
+
+<dl class="enumvalue">
+<dt id="c.LWIP_NONBLOCKING">
+<span class="target" id="uwb__lwip_8h_1a0a39543eeb9a0e683fcbb343437a90f8a7049678f268b35cd4119e971b637e100"></span><code class="descname">LWIP_NONBLOCKING</code><a class="headerlink" href="#c.LWIP_NONBLOCKING" title="Permalink to this definition">¶</a></dt>
+<dd><p>lwip non-blocking mode </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="c.uwb_lwip_init">
+<span class="target" id="uwb__lwip_8h_1aa0f3b1f7ba75c95dd6b4ac33c098ecac"></span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>* <code class="descname">uwb_lwip_init</code><span class="sig-paren">(</span>struct  uwb_dev  *<em>&nbsp;inst</em>, <a class="reference internal" href="#c.uwb_lwip_config_t" title="uwb_lwip_config_t">uwb_lwip_config_t</a>  *<em>&nbsp;config</em>, uint16_t<em>&nbsp;nframes</em>, uint16_t<em>&nbsp;buf_len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_lwip_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_lwip_init Function to initialize the lwip service] </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>[Structure pointer to lwip] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [Device/Parent instance] </li>
+<li><code class="docutils literal notranslate"><span class="pre">config</span></code>: [Structure containing the configuration values] </li>
+<li><code class="docutils literal notranslate"><span class="pre">nframes</span></code>: [Number of frames to allocate memory for] </li>
+<li><code class="docutils literal notranslate"><span class="pre">buf_len</span></code>: [Buffer length of each frame] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_pcb_init">
+<span class="target" id="uwb__lwip_8h_1ac1e50b439190ff3b389c2aec3cf21765"></span>void <code class="descname">uwb_pcb_init</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>  *<em>&nbsp;lwip</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_pcb_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_pcb_init Function to initialize a PCB for raw lwip] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [LWIP instance] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_lwip_free">
+<span class="target" id="uwb__lwip_8h_1a974e2dfbd5e8f9cab76be303a1856ebe"></span>void <code class="descname">uwb_lwip_free</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>  *<em>&nbsp;inst</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_lwip_free" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_lwip_free Function to mark lwip serveice as free] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [Device/Parent Instance] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_lwip_write">
+<span class="target" id="uwb__lwip_8h_1a0cf191aad5c79778b8b84f247e7d6898"></span>struct uwb_dev_status <code class="descname">uwb_lwip_write</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>  *<em>&nbsp;lwip</em>, struct pbuf *<em>&nbsp;p</em>, <a class="reference internal" href="#c.uwb_lwip_modes_t" title="uwb_lwip_modes_t">uwb_lwip_modes_t</a><em>&nbsp;code</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_lwip_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_lwip_write Function to send lwIP buffer to radio] </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>[Device Status] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [LWIP instance] </li>
+<li><code class="docutils literal notranslate"><span class="pre">p</span></code>: [lwIP Buffer to be sent to radio] </li>
+<li><code class="docutils literal notranslate"><span class="pre">mode</span></code>: [Blocking : Wait for Tx to complete] [Non-Blocking : Don’t wait for Tx to complete] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_low_level_init">
+<span class="target" id="uwb__lwip_8h_1af60b5deb6ffa687deff2119443b9009e"></span>void <code class="descname">uwb_low_level_init</code><span class="sig-paren">(</span>struct  uwb_dev  *<em>&nbsp;inst</em>, struct  uwb_dev_txrf_config  *<em>&nbsp;txrf_config</em>, struct  uwb_dev_config  *<em>&nbsp;mac_config</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_low_level_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_low_level_init Radio Low level initialization function] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [Device/Parent instance] </li>
+<li><code class="docutils literal notranslate"><span class="pre">txrf_config</span></code>: [Radio Tx and Rx configuration structure] </li>
+<li><code class="docutils literal notranslate"><span class="pre">mac_config</span></code>: [Radio MAC configuration structure] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_netif_config">
+<span class="target" id="uwb__lwip_8h_1a4919f4fa31b42e366fec86a1e395b49d"></span>void <code class="descname">uwb_netif_config</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>  *<em>&nbsp;lwip</em>, struct netif *<em>&nbsp;netif</em>, ip_addr_t *<em>&nbsp;my_ip_addr</em>, bool<em>&nbsp;rx_status</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_netif_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_netif_config lwIP network interface configuration function] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [Device/Parent instance] </li>
+<li><code class="docutils literal notranslate"><span class="pre">uwb_netif</span></code>: [Network interface structure to be configured] </li>
+<li><code class="docutils literal notranslate"><span class="pre">my_ip_addr</span></code>: [IP address of radio] </li>
+<li><code class="docutils literal notranslate"><span class="pre">rx_status</span></code>: [Defalut mode status] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_netif_init">
+<span class="target" id="uwb__lwip_8h_1a510513416836f363efec6acf8dcc8468"></span>err_t <code class="descname">uwb_netif_init</code><span class="sig-paren">(</span>struct netif *<em>&nbsp;uwb_netif</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_netif_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_netif_init Network interface initialization function] </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>[Error status : Default ERR_OK] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">uwb_netif</span></code>: [Network interface structure to be initialized] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_lwip_send">
+<span class="target" id="uwb__lwip_8h_1a5b9feeebd9091509e1653cbec3430066"></span>void <code class="descname">uwb_lwip_send</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>  *<em>&nbsp;lwip</em>, uint16_t<em>&nbsp;payload_size</em>, char *<em>&nbsp;payload</em>, ip_addr_t *<em>&nbsp;ipaddr</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_lwip_send" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_lwip_send function to pass the payload to lwIP stack] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [Device/Parent instance] </li>
+<li><code class="docutils literal notranslate"><span class="pre">payload_size</span></code>: [Size of the payload to be sent] </li>
+<li><code class="docutils literal notranslate"><span class="pre">payload</span></code>: [Pointer to the payload] </li>
+<li><code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>: [Pointer to the IP address of target device] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_ll_output">
+<span class="target" id="uwb__lwip_8h_1a38d33d3a1b311c1b42b8cb784a2bf620"></span>err_t <code class="descname">uwb_ll_output</code><span class="sig-paren">(</span>struct netif *<em>&nbsp;uwb_netif</em>, struct pbuf *<em>&nbsp;p</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_ll_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_ll_output Low Level output function, acts as a brigde between 6lowPAN and radio] </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>[Error status] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">uwb_netif</span></code>: [Network interface] </li>
+<li><code class="docutils literal notranslate"><span class="pre">p</span></code>: [Buffer to be sent to the radio] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_ll_input">
+<span class="target" id="uwb__lwip_8h_1abbbe47a58c7d20450fa7f423ec733cca"></span>err_t <code class="descname">uwb_ll_input</code><span class="sig-paren">(</span>struct pbuf *<em>&nbsp;p</em>, struct netif *<em>&nbsp;uwb_netif</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_ll_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_ll_input Low level input function, acts as a bridge between radio input and 6lowPAN] </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>[Error status] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">pt</span></code>: [Pointer to received buffer from radio] </li>
+<li><code class="docutils literal notranslate"><span class="pre">uwb_netif</span></code>: [Network interface] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.uwb_lwip_start_rx">
+<span class="target" id="uwb__lwip_8h_1a929f7a5ca8645cc45144033fcea9ef37"></span>void <code class="descname">uwb_lwip_start_rx</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a>  *<em>&nbsp;lwip</em>, uint16_t<em>&nbsp;timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#c.uwb_lwip_start_rx" title="Permalink to this definition">¶</a></dt>
+<dd><p>[uwb_lwip_start_rx Function to put the radio in Receive mode] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inst</span></code>: [LWIP instance] </li>
+<li><code class="docutils literal notranslate"><span class="pre">timeout</span></code>: [Timeout value for radio in receive mode] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.print_error">
+<span class="target" id="uwb__lwip_8h_1acf14ffd19b126a5798f2d9a7243650e2"></span>void <code class="descname">print_error</code><span class="sig-paren">(</span>err_t<em>&nbsp;error</em><span class="sig-paren">)</span><a class="headerlink" href="#c.print_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>[print_error Function to print error status and type] </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">error</span></code>: [Error Type] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.lwip_rx_cb">
+<span class="target" id="uwb__lwip_8h_1aa9bf82e7c92eae270a9664861ec889f7"></span>uint8_t <code class="descname">lwip_rx_cb</code><span class="sig-paren">(</span>void *<em>&nbsp;arg</em>, struct raw_pcb *<em>&nbsp;pcb</em>, struct pbuf *<em>&nbsp;p</em>, const ip_addr_t *<em>&nbsp;addr</em><span class="sig-paren">)</span><a class="headerlink" href="#c.lwip_rx_cb" title="Permalink to this definition">¶</a></dt>
+<dd><p>[lwip_rx_cb Received payload is fetched to this function after lwIP stack] </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>[1: Signifies that the payload is received successfully] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">arg</span></code>: [User defined argument] </li>
+<li><code class="docutils literal notranslate"><span class="pre">pcb</span></code>: [Pointer to PCB] </li>
+<li><code class="docutils literal notranslate"><span class="pre">p</span></code>: [Payload pointer] </li>
+<li><code class="docutils literal notranslate"><span class="pre">addr</span></code>: [Device IP address] </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<dl class="struct">
+<dt id="c._uwb_lwip_config_t">
+<span class="target" id="struct__uwb__lwip__config__t"></span><em class="property">struct </em><code class="descname">_uwb_lwip_config_t</code><a class="headerlink" href="#c._uwb_lwip_config_t" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;uwb_lwip.h&gt;</em><p>Lwip config parameters. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c._uwb_lwip_config_t::poll_resp_delay">
+<span class="target" id="struct__uwb__lwip__config__t_1a9ae160c60199ab092bd9d99d6912012d"></span>uint16_t <code class="descname">poll_resp_delay</code><a class="headerlink" href="#c._uwb_lwip_config_t::poll_resp_delay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delay between frames, in UWB microseconds. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_config_t::resp_timeout">
+<span class="target" id="struct__uwb__lwip__config__t_1af932e2791c9741d274bcab357501b6d5"></span>uint16_t <code class="descname">resp_timeout</code><a class="headerlink" href="#c._uwb_lwip_config_t::resp_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive response timeout, in UWB microseconds. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_config_t::uwbtime_to_systime">
+<span class="target" id="struct__uwb__lwip__config__t_1a8a58180e68b899620f1bc4411e676e1f"></span>uint32_t <code class="descname">uwbtime_to_systime</code><a class="headerlink" href="#c._uwb_lwip_config_t::uwbtime_to_systime" title="Permalink to this definition">¶</a></dt>
+<dd><p>UWB time to system time. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="struct">
+<dt id="c._uwb_lwip_status_t">
+<span class="target" id="struct__uwb__lwip__status__t"></span><em class="property">struct </em><code class="descname">_uwb_lwip_status_t</code><a class="headerlink" href="#c._uwb_lwip_status_t" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;uwb_lwip.h&gt;</em><p>Lwip status parameters. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c.1">
+<span class="target" id="struct__uwb__lwip__status__t_1a917a249a3a01ccdff7ea0baca784c98c"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::selfmalloc : <code class="descname">1</code><a class="headerlink" href="#c.1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal flag for memory garbage collection. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1a4f727efbd4d75c02328a73cbcdee2a53"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::initialized : <code class="descname">1</code></dt>
+<dd><p>Instance allocated. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1ad7dcffe56bb13da7a500258b7d7f53f0"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::start_tx_error : <code class="descname">1</code></dt>
+<dd><p>Set for start transmit error. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1a5de450da38740cfe593600b50610314d"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::start_rx_error : <code class="descname">1</code></dt>
+<dd><p>Set for start receive error. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1aa64465663f2ca723d47e7296d748e664"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::tx_frame_error : <code class="descname">1</code></dt>
+<dd><p>Set transmit frame error. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1a8eb12fc54270cbdfa90fa60f06fbe79c"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::rx_error : <code class="descname">1</code></dt>
+<dd><p>Set for receive error. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1a9fa3b57d20de9140b5f9646f9f5b96fc"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::rx_timeout_error : <code class="descname">1</code></dt>
+<dd><p>Set for receive timeout error. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__status__t_1a45ac6e9ec9ca3fe0853fdc1b459f6ecf"></span>uint32_t <a class="reference internal" href="#c._uwb_lwip_status_t" title="_uwb_lwip_status_t">_uwb_lwip_status_t</a>::request_timeout : <code class="descname">1</code></dt>
+<dd><p>Set for request timeout. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="struct">
+<dt id="c._uwb_lwip_instance_t">
+<span class="target" id="struct__uwb__lwip__instance__t"></span><em class="property">struct </em><code class="descname">_uwb_lwip_instance_t</code><a class="headerlink" href="#c._uwb_lwip_instance_t" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;uwb_lwip.h&gt;</em><p>Lwip instance parameters. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::dev_inst">
+<span class="target" id="struct__uwb__lwip__instance__t_1a4c4990b211965076aae53468255c6790"></span>struct uwb_dev* <code class="descname">dev_inst</code><a class="headerlink" href="#c._uwb_lwip_instance_t::dev_inst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for uwb instance. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::cbs">
+<span class="target" id="struct__uwb__lwip__instance__t_1aff7e80080971eea63a6da27ddfc16d8e"></span>struct uwb_mac_interface <code class="descname">cbs</code><a class="headerlink" href="#c._uwb_lwip_instance_t::cbs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::sem">
+<span class="target" id="struct__uwb__lwip__instance__t_1a277f542113ba5938ede52d8fe89fd68a"></span>struct os_sem <code class="descname">sem</code><a class="headerlink" href="#c._uwb_lwip_instance_t::sem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for OS semaphores. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::data_sem">
+<span class="target" id="struct__uwb__lwip__instance__t_1a19afa2da5c322cd3298a99dce1487f8a"></span>struct os_sem <code class="descname">data_sem</code><a class="headerlink" href="#c._uwb_lwip_instance_t::data_sem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for data of semaphores. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::lwip_p2p">
+<span class="target" id="struct__uwb__lwip__instance__t_1af9c04112e93186625a94136281477758"></span>struct _uwb_lwip_p2p_instance_t* <code class="descname">lwip_p2p</code><a class="headerlink" href="#c._uwb_lwip_instance_t::lwip_p2p" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::config">
+<span class="target" id="struct__uwb__lwip__instance__t_1ab8e661b265105c1d20fd4d13b7f04127"></span><a class="reference internal" href="#c.uwb_lwip_config_t" title="uwb_lwip_config_t">uwb_lwip_config_t</a>* <code class="descname">config</code><a class="headerlink" href="#c._uwb_lwip_instance_t::config" title="Permalink to this definition">¶</a></dt>
+<dd><p>lwip config parameters </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::status">
+<span class="target" id="struct__uwb__lwip__instance__t_1a2dbae726772ba6411d6b4dc3a505bbb3"></span><a class="reference internal" href="#c.uwb_lwip_status_t" title="uwb_lwip_status_t">uwb_lwip_status_t</a> <code class="descname">status</code><a class="headerlink" href="#c._uwb_lwip_instance_t::status" title="Permalink to this definition">¶</a></dt>
+<dd><p>lwip status </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::seq_num">
+<span class="target" id="struct__uwb__lwip__instance__t_1a77d3442534d99d0c7ee461e9c8089271"></span>uint8_t <code class="descname">seq_num</code><a class="headerlink" href="#c._uwb_lwip_instance_t::seq_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence number for sent frames. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::nframes">
+<span class="target" id="struct__uwb__lwip__instance__t_1a1ad4e8a9a6013b7f626f9ab479d04de4"></span>uint16_t <code class="descname">nframes</code><a class="headerlink" href="#c._uwb_lwip_instance_t::nframes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of buffers defined to store the lwip data. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::buf_idx">
+<span class="target" id="struct__uwb__lwip__instance__t_1afaf59deca4431d7dd108736791b8847c"></span>uint16_t <code class="descname">buf_idx</code><a class="headerlink" href="#c._uwb_lwip_instance_t::buf_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates number of buffer instances for the chosen bsp. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::buf_len">
+<span class="target" id="struct__uwb__lwip__instance__t_1a0e7997b243f1ac35077f1fe96cd6b8d4"></span>uint16_t <code class="descname">buf_len</code><a class="headerlink" href="#c._uwb_lwip_instance_t::buf_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates buffer length. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::dst_addr">
+<span class="target" id="struct__uwb__lwip__instance__t_1af346a55d6704cb4d5faa8a2d929d2f6a"></span>uint16_t <code class="descname">dst_addr</code><a class="headerlink" href="#c._uwb_lwip_instance_t::dst_addr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destination address. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::lwip_netif">
+<span class="target" id="struct__uwb__lwip__instance__t_1a08e0098cac8c4a892589c7d77c59226b"></span>struct netif <code class="descname">lwip_netif</code><a class="headerlink" href="#c._uwb_lwip_instance_t::lwip_netif" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network interface. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::pcb">
+<span class="target" id="struct__uwb__lwip__instance__t_1ad3918b43ce6f7fbef369382bf942ab19"></span>struct raw_pcb* <code class="descname">pcb</code><a class="headerlink" href="#c._uwb_lwip_instance_t::pcb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pointer to raw_pcb structure. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c._uwb_lwip_instance_t::payload_ptr">
+<span class="target" id="struct__uwb__lwip__instance__t_1a263a6a9887210105228fbc55868bd0ad"></span>void* <code class="descname">payload_ptr</code><a class="headerlink" href="#c._uwb_lwip_instance_t::payload_ptr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pointer to payload. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="struct__uwb__lwip__instance__t_1af91c5d0bf0ad40571e196e210e1e0b6b"></span><code class="descname">char* _uwb_lwip_instance_t::data_buf[]</code></dt>
+<dd><p>Data buffers. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="struct">
+<dt id="c._uwb_lwip_cb_t">
+<span class="target" id="struct__uwb__lwip__cb__t"></span><em class="property">struct </em><code class="descname">_uwb_lwip_cb_t</code><a class="headerlink" href="#c._uwb_lwip_cb_t" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;uwb_lwip.h&gt;</em><p>Lwip callback. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c._uwb_lwip_cb_t::recv">
+<span class="target" id="struct__uwb__lwip__cb__t_1ab8ff21528c05b27f3b699a61b59ed6d0"></span>void<code class="descname">recv)</code><span class="sig-paren">(</span><a class="reference internal" href="#c.uwb_lwip_instance_t" title="uwb_lwip_instance_t">uwb_lwip_instance_t</a><em>&nbsp;*lwip</em>, uint16_t<em>&nbsp;timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#c._uwb_lwip_cb_t::recv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep tracks of lwip tx/rx status. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="struct">
+<dt id="c._uwb_lwip_context_t">
+<span class="target" id="struct__uwb__lwip__context__t"></span><em class="property">struct </em><code class="descname">_uwb_lwip_context_t</code><a class="headerlink" href="#c._uwb_lwip_context_t" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;uwb_lwip.h&gt;</em><p>Lwip context parameters. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c._uwb_lwip_context_t::rx_cb">
+<span class="target" id="struct__uwb__lwip__context__t_1a0bc368124c951fa0bf84f0b5936b35d3"></span><a class="reference internal" href="#c.uwb_lwip_cb_t" title="uwb_lwip_cb_t">uwb_lwip_cb_t</a> <code class="descname">rx_cb</code><a class="headerlink" href="#c._uwb_lwip_context_t::rx_cb" title="Permalink to this definition">¶</a></dt>
+<dd><p>DW1000 lwip receive callback. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+                   </div>
+                  </div>
+                  
+    <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+      
+        <a href="uwb_pan.html" class="btn btn-neutral float-right" title="uwb_pan" accesskey="n">Next: uwb_pan <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rtdoa.html" class="btn btn-neutral" title="rtdoa" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous: rtdoa</a>
+      
+    </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- ENDS CONTENT SECTION -->
+          </div>
+          <!-- ENDS .content -->
+        </div>
+      </div>
+      <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+          
+              <p class="copyright">Apache Mynewt is available under Apache License, version 2.0.</p>
+          
+      </div>
+      <div class="col-xs-12">
+          <div class="logos">
+              <img src="../../../_static/img/asf_logo_wide_small.png" alt="Apache" title="Apache">
+              <small class="footnote">
+                Apache Mynewt, Mynewt, Apache, the Apache feather logo, and the Apache Mynewt project logo are either
+                registered trademarks or trademarks of the Apache Software Foundation in the United States and other countries.
+              </small>
+              <a href="">
+                <img src="../../../_static/img/add_to_slack.png" alt="Slack Icon" title="Join our Slack Community" />
+              </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #wrapper -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/js/bootstrap-3.0.3.min.js"></script>
+      <script type="text/javascript" src="../../../_static/js/affix.js"></script>
+      <script type="text/javascript" src="../../../_static/js/main.js"></script>
+
+   
+
+  </body>
+</html>

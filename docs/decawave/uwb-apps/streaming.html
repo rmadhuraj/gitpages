@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    <title>streaming &mdash; Apache Mynewt latest documentation</title>
+    
+
+    
+    
+      <link rel="shortcut icon" href="../../_static/mynewt-logo-only-newt32x32.png"/>
+    
+
+    
+
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+    
+      <link rel="stylesheet" href="../../_static/css/sphinx_theme.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/bootstrap-3.0.3.min.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/v2.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/restructuredtext.css" type="text/css" />
+    
+
+    
+
+    <link rel="stylesheet" href="../../_static/css/overrides.css" type="text/css" />
+          <link rel="index" title="Index"
+                href="../../genindex.html"/>
+          <link rel="search" title="Search" href="../../search.html"/>
+      <link rel="top" title="Apache Mynewt latest documentation" href="../../index.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+	i["GoogleAnalyticsObject"] = r;
+	(i[r] =
+		i[r] ||
+		function() {
+			(i[r].q = i[r].q || []).push(arguments);
+		}),
+		(i[r].l = 1 * new Date());
+	(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a, m);
+})(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+
+ga("create", "UA-72162311-1", "auto");
+ga("send", "pageview");
+</script>
+    
+
+  </head>
+
+  <body class="not-front page-documentation" role="document" >
+    <div id="wrapper">
+      <div class="container">
+    <div id="banner" class="row v2-main-banner">
+        <a class="logo-cell" href="/">
+            <img class="logo" src="../../_static/img/logo.png">
+        </a>
+        <div class="tagline-cell">
+            <h4 class="tagline">An OS to build, deploy and securely manage billions of devices</h4>
+        </div>
+        <div class="news-cell">
+            <div class="well">
+                <h4>Latest News:</h4> <a href="/download">Apache Mynewt 1.7.0, Apache NimBLE 1.2.0 </a> released (August 4, 2019)
+            </div>
+        </div>
+    </div>
+</div>
+      
+<header>
+    <nav id="navbar" class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <!-- Collapsed navigation -->
+            <div class="navbar-header">
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Expanded navigation -->
+            <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/"><i class="fa fa-home" style="font-size: larger;"></i></a>
+                    </li>
+                    <li class="important">
+                        <a href="/quick-start/">Quick Start</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/talks/">Talks</a>
+                    </li>
+                    <li class="active">
+                        <a href="/documentation/">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="/download/">Download</a>
+                    </li>
+                    <li>
+                        <a href="/community/">Community</a>
+                    </li>
+                    <li>
+                        <a href="/events/">Events</a>
+                    </li>
+                </ul>
+
+                <!-- Search, Navigation and Repo links -->
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+      <!-- STARTS MAIN CONTENT -->
+      <div id="main-content">
+        
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/documentation/">Docs</a> /
+    
+    streaming
+    
+  <div class="sourcelink">
+    <a href="https://github.com/apache/mynewt-documentation/edit/master/docs/decawave/uwb-apps/streaming.rst" class="icon icon-github"
+           rel="nofollow"> Edit on GitHub</a>
+</div>
+  </div>
+</div>
+        <!-- STARTS CONTAINER -->
+        <div class="container">
+          <!-- STARTS .content -->
+          <div id="content" class="row">
+            
+            <!-- STARTS .container-sidebar -->
+<div class="container-sidebar col-xs-12 col-sm-3">
+  <div id="docSidebar" class="sticky-container">
+    <div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    <!-- Note: only works when deployed -->
+<select class="form-control" onchange="if (this.value) window.location.href=this.value">
+  <option value="/latest" selected>
+    Version: latest
+  </option>
+  <option value="/v1_7_0" >
+    Version: 1.7.0
+  </option>
+  <option value="/v1_6_0" >
+    Version: 1.6.0
+  </option>
+  <option value="/v1_5_0" >
+    Version: 1.5.0
+  </option>
+  <option value="/v1_4_0" >
+    Version: 1.4.0
+  </option>
+  <option value="/v1_3_0/os/introduction" >
+    Version: 1.3.0
+  </option>
+  <option value="/v1_2_0/os/introduction" >
+    Version: 1.2.0
+  </option>
+  <option value="/v1_1_0/os/introduction" >
+    Version: 1.1.0
+  </option>
+  <option value="/v1_0_0/os/introduction" >
+    Version: 1.0.0
+  </option>
+  <option value="/v0_9_0/os/introduction" >
+    Version: 0.9.0
+  </option>
+</select>
+    <div class="region region-sidebar">
+      <div class="docs-menu">
+      
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../decawave.html">Decawave-UWB User Guide</a></li>
+</ul>
+
+        
+      
+      </div>
+    </div>
+  </div>
+  <!-- ENDS STICKY CONTAINER -->
+</div>
+<!-- ENDS .container-sidebar -->
+
+            <div class="col-xs-12 col-sm-9">
+              
+
+              
+              <div class="">
+                <div class="rst-content">
+                  <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                   <div itemprop="articleBody">
+                    
+  <div class="section" id="streaming">
+<h1>streaming<a class="headerlink" href="#streaming" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="decawave-uwb-transport-streaming-example">
+<h2>Decawave UWB Transport Streaming Example<a class="headerlink" href="#decawave-uwb-transport-streaming-example" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The streaming example makes use of the UWB transport layer for stream data. The application uses a timer callback to enqueue packets into a memory queue asynchronously. The timer callback is called 60 times a second and attempts to enqueue 16 packets. The UWB transport is a synchronous transport scheme that makes use of the TMDA service to dequeue packets, encapsulates them in a frame header, and writes them to the tx_buffer. The TDMA scheme in this example consists of 160 slots. Within each slot, the UWB transport dequeue as many frames as the underlying transport can accommodate. The throughput depends on the data rate of the transceiver and the SPI clock frequency.</p>
+<p>In this example 60fps x 16(buffer) x 512 (sizeof(buffer)) x 8 (bits) = 3.9Mbps are written from the Tag to the ClockMaster Node. For the uwb transport this is 160fps x 6 (frames) x 512 x  8(bits) = 3.9Mbps. The default datarate is 6.8Mbps with an 8MHz SPI clock.</p>
+<p>The uwb transport layer coexists with other upper-mac layer services. The application layer handles the coexistence by defining how the TDMA slots are allocated. For example, by allocating every 16th slot to a nrng_request, it is possible to range to 16-nodes at 10Hz while streaming in the remaining slots.</p>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Flash tx/rx_stream apps</li>
+</ol>
+<p>In this example the tx_stream streams transmits a buffer at 3.9Mbps to the rx_stream. The rx_stream is the designated clock master. The example also enables bleprph package so stats information can be view through AdaFruit Mynewt Manager App or in the CLI.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">newt target create tx_stream</span>
+<span class="go">newt target set tx_stream app=apps/streaming</span>
+<span class="go">newt target set tx_stream bsp=@decawave-uwb-core/hw/bsp/dwm1001</span>
+<span class="go">newt target set tx_stream build_profile=debug</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend tx_stream <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART_BAUD</span><span class="o">=</span><span class="m">460800</span>:CONSOLE_UART<span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="go">newt target amend tx_stream    syscfg=UWB_TRANSPORT_ROLE=1:OS_LATENCY=1000:CONSOLE_UART_BAUD=115200:CONSOLE_UART=1:CONSOLE_RTT=0:DW1000_SYS_STATUS_BACKTRACE_LEN=128</span>
+<span class="go">newt run tx_stream 0</span>
+
+<span class="gp">#</span>newt target <span class="nb">set</span> tx_stream <span class="nv">bsp</span><span class="o">=</span>@decawave-uwb-core/hw/bsp/dwm1002
+<span class="gp">#</span>newt run tx_stream <span class="m">0</span>
+
+<span class="go">newt target create rx_stream</span>
+<span class="go">newt target set rx_stream app=apps/streaming</span>
+<span class="go">newt target set rx_stream bsp=@decawave-uwb-core/hw/bsp/dwm1001</span>
+<span class="go">newt target set rx_stream build_profile=debug</span>
+<span class="gp">#</span> Uncomment next line to use uart instead of rtt console
+<span class="gp">#</span>newt target amend rx_stream <span class="nv">syscfg</span><span class="o">=</span><span class="nv">CONSOLE_UART_BAUD</span><span class="o">=</span><span class="m">460800</span>:CONSOLE_UART<span class="o">=</span><span class="m">1</span>:CONSOLE_RTT<span class="o">=</span><span class="m">0</span>
+<span class="go">newt target amend rx_stream    syscfg=UWB_TRANSPORT_ROLE=0:OS_LATENCY=1000:USE_DBLBUFFER=1:CONSOLE_UART_BAUD=115200:CONSOLE_UART=1:CONSOLE_RTT=0:DW1000_SYS_STATUS_BACKTRACE_LEN=128</span>
+<span class="go">newt run rx_stream 0</span>
+</pre></div>
+</div>
+<div class="section" id="expected-output-using-interrupt-backtrace">
+<h3>Expected Output using Interrupt backtrace<a class="headerlink" href="#expected-output-using-interrupt-backtrace" title="Permalink to this headline">¶</a></h3>
+<p>You can view the timing for the interrupts and see the occurrence of Tx frames. Below depdicts the transmission of 5 subslot frames in two slots. Each frame has a 512 byte payload with a duration of 767us (512Byte, 128Bit Preamble,SFD), there is a 300us gard between subslots resulting in 1067us for each subslot frame. The uwb_transport layer will fill each slot with subslot frames until the boundary of the next slot. In this example there are 160 slot per superframe, with a slot window of 6300us - OS_LATENCY.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">004208 compat&gt; dw1000 ibt</span>
+<span class="go">       usec   diff usec    abs usec  fctrl   status    status2txt</span>
+<span class="go">--------------------------------------------------------------------------------</span>
+<span class="go">          0           0    40792806  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">        296         296    40793102         00000011  TxStart|IRS</span>
+<span class="go">       1061         765    40793867  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">       2747        1686    40795553         00000011  TxStart|IRS</span>
+<span class="go">       3517         770    40796323  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">       3814         297    40796620         00000011  TxStart|IRS</span>
+<span class="go">       4586         772    40797392  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">       4882         296    40797688         00000011  TxStart|IRS</span>
+<span class="go">       5653         771    40798459  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">       5950         297    40798756         00000011  TxStart|IRS</span>
+<span class="go">       6721         771    40799527  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">       7018         297    40799824         00000011  TxStart|IRS</span>
+<span class="go">       7783         765    40800589  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">       9469        1686    40802275         00000011  TxStart|IRS</span>
+<span class="go">      10238         769    40803044  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">      10536         298    40803342         00000011  TxStart|IRS</span>
+<span class="go">      11308         772    40804114  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">      11604         296    40804410         00000011  TxStart|IRS</span>
+<span class="go">      12374         770    40805180  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">      12672         298    40805478         00000011  TxStart|IRS</span>
+<span class="go">      13443         771    40806249  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">      13739         296    40806545         00000011  TxStart|IRS</span>
+<span class="go">      14505         766    40807311  EF BE  000000E1  TxFrameSent|TxPHYDone|TxPreamDone|IRS</span>
+<span class="go">      16190        1685    40808996         00000011  TxStart|IRS</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                   </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- ENDS CONTENT SECTION -->
+          </div>
+          <!-- ENDS .content -->
+        </div>
+      </div>
+      <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+          
+              <p class="copyright">Apache Mynewt is available under Apache License, version 2.0.</p>
+          
+      </div>
+      <div class="col-xs-12">
+          <div class="logos">
+              <img src="../../_static/img/asf_logo_wide_small.png" alt="Apache" title="Apache">
+              <small class="footnote">
+                Apache Mynewt, Mynewt, Apache, the Apache feather logo, and the Apache Mynewt project logo are either
+                registered trademarks or trademarks of the Apache Software Foundation in the United States and other countries.
+              </small>
+              <a href="">
+                <img src="../../_static/img/add_to_slack.png" alt="Slack Icon" title="Join our Slack Community" />
+              </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #wrapper -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/js/bootstrap-3.0.3.min.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+openthread
+=============
+
+Overview of OpenThread
+----------------------
+
+Openthread released by Google is an open-source implementation of the `Thread <http://threadgroup.org/>`_ networking protocol.
+Openthread implements all the features defined by Thread specifications, such as the networking layers
+
+- Ipv6 with  6LoWPAN,
+- IEEE 802.15.4 with MAC security,
+- IEEE 802.15.4 PHY
+- Mesh Link Establishment,
+- Mesh Routing
+- Device roles, as well as Border Router support..
+
+Thread is a secure, wireless mesh networking protocol which ensures
+
+- Safe and reliable networks
+- Simple connectivity
+- Low power usage
+- No single point of failure
+
+Openthread on nrf52832+DW1000 with mynewt:
+---------------------------------------------
+1. The `uwb-core/lib/openthread <https://github.com/Decawave/uwb-core/tree/master/lib/openthread>`_ enables the support for openthread mynewt by implementing
+
+   - Platform(nrf52832) related abstraction layer.
+   - Radio (DW1000) related abstraction layer.
+   - Abstraction layer common to the platform, radio, OS and Openthread.
+2. It also includes Openthred core pre built Libraries, Openthread stack related headers.
+3. The mynewt app ``uwb-apps/apps/openThreadApp`` showcases the various features of openthread on DW1000 (over UWB) with help of mynewt subsytem.
+4. Mynewt OS takes care of scheduling various Openthread tasks and events.
+
+**NOTE:** Refer to the `OpenThreadAPP <https://github.com/Decawave/uwb-apps/tree/master/apps/openThreadApp/>`_ for the usage of Openthread on DW1000.
+
+API
+---
+
+.. doxygenfile:: lib/openthread/include/openthread/openthread.h
