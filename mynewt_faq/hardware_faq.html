@@ -40,10 +40,7 @@
           <link rel="index" title="Index"
                 href="../genindex.html"/>
           <link rel="search" title="Search" href="../search.html"/>
-      <link rel="top" title="Apache Mynewt latest documentation" href="../index.html"/>
-          <link rel="up" title="Mynewt FAQ" href="index.html"/>
-          <link rel="next" title="Mynewt FAQ - Syntax, Semantics, Configuration" href="syntax_faq.html"/>
-          <link rel="prev" title="Mynewt FAQ - File System" href="fs_faq.html"/> 
+      <link rel="top" title="Apache Mynewt latest documentation" href="../index.html"/> 
 
     
     <script src="../_static/js/modernizr.min.js"></script>
@@ -154,8 +151,6 @@ ga("send", "pageview");
   <div class="container">
     <a href="/documentation/">Docs</a> /
     
-      <a href="index.html">Mynewt FAQ</a> /
-    
     Mynewt FAQ - Hardware-Specific Questions
     
   <div class="sourcelink">
@@ -217,33 +212,8 @@ ga("send", "pageview");
       
         
         
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/index.html">Setup &amp; Get Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts.html">Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../external_links.html">Third-party Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../os/os_user_guide.html">OS User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../network/docs/index.html">BLE User Guide</a></li>
+            <ul>
 <li class="toctree-l1"><a class="reference internal" href="../decawave/decawave.html">Decawave-UWB User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../newt/index.html">Newt Tool Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../newtmgr/index.html">Newt Manager Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Mynewt FAQ</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="admin_faq.html">Administrative</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bluetooth_faq.html">Bluetooth</a></li>
-<li class="toctree-l2"><a class="reference internal" href="boot_faq.html">Bootloader and Firmware Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules_faq.html">Drivers and Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fs_faq.html">File System</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware-Specific</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntax_faq.html">Mynewt Syntax and Semantics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nfc_faq.html">NFC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="newt_faq.html">Newt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="newtmgr_faq.html">Newt Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="port_faq.html">Porting Mynewt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshoot_faq.html">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Appendix</a></li>
 </ul>
 
         
@@ -294,7 +264,7 @@ an LED on and off. Why is this the case?</p>
 <p><strong>Q</strong>: Can <code class="docutils literal notranslate"><span class="pre">OS_TICKS_PER_SEC</span></code> be changed per app? I’m on the nRF52 and I need better time precision than 128Hz.</p>
 <p><strong>A</strong>: No, it isn’t possible to change the ticks per second for a single app.  That constant is defined to be most efficient
 for the particular MCU.</p>
-<p>If you need precision, the OS tick timer is probably not the right thing to use.  Take a look at <a class="reference internal" href="../os/core_os/cputime/os_cputime.html"><span class="doc">OS CPU Time</span></a> for timer documentation. <code class="docutils literal notranslate"><span class="pre">os_cputime</span></code> has 1MHz frequency by default, and is enabled by default.
+<p>If you need precision, the OS tick timer is probably not the right thing to use.  Take a look at <span class="xref std std-doc">OS CPU Time</span> for timer documentation. <code class="docutils literal notranslate"><span class="pre">os_cputime</span></code> has 1MHz frequency by default, and is enabled by default.
 It is recommended to use this for higher precision applications.</p>
 </div>
 <div class="section" id="size-limit-on-transaction-length-for-nrf52">
@@ -319,15 +289,6 @@ tell me how to do so?</p>
                    </div>
                   </div>
                   
-    <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
-      
-        <a href="syntax_faq.html" class="btn btn-neutral float-right" title="Mynewt FAQ - Syntax, Semantics, Configuration" accesskey="n">Next: Mynewt FAQ - Syntax, Semantics, Configuration <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="fs_faq.html" class="btn btn-neutral" title="Mynewt FAQ - File System" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous: Mynewt FAQ - File System</a>
-      
-    </div>
-
                 </div>
               </div>
             </div>

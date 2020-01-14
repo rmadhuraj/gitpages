@@ -1,9 +1,0 @@
-rtdoa
-========
-
-Reverse TDOA
-
-
-Overview
----------
-TBD

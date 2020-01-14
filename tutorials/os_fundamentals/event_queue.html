@@ -40,10 +40,7 @@
           <link rel="index" title="Index"
                 href="../../genindex.html"/>
           <link rel="search" title="Search" href="../../search.html"/>
-      <link rel="top" title="Apache Mynewt latest documentation" href="../../index.html"/>
-          <link rel="up" title="OS Fundamentals" href="os_fundamentals.html"/>
-          <link rel="next" title="Tasks and Priority Management" href="tasks_lesson.html"/>
-          <link rel="prev" title="OS Fundamentals" href="os_fundamentals.html"/> 
+      <link rel="top" title="Apache Mynewt latest documentation" href="../../index.html"/> 
 
     
     <script src="../../_static/js/modernizr.min.js"></script>
@@ -154,10 +151,6 @@ ga("send", "pageview");
   <div class="container">
     <a href="/documentation/">Docs</a> /
     
-      <a href="../tutorials.html">Tutorials</a> /
-    
-      <a href="os_fundamentals.html">OS Fundamentals</a> /
-    
     How to Use Event Queues to Manage Multiple Events
     
   <div class="sourcelink">
@@ -219,35 +212,8 @@ ga("send", "pageview");
       
         
         
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../get_started/index.html">Setup &amp; Get Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">Concepts</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../blinky/blinky.html">Project Blinky</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../repo/add_repos.html">Working with repositories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../slinky/project-slinky.html">Project Slinky for Remote Comms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ble/ble.html">Bluetooth Low Energy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lora/lorawanapp.html">LoRa</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="os_fundamentals.html">OS Fundamentals</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Events and Event Queues</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tasks_lesson.html">Task and Priority Management</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../devmgmt/devmgmt.html">Remote Device Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sensors/sensors.html">Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tooling/tooling.html">Tooling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other/other.html">Other</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../external_links.html">Third-party Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../os/os_user_guide.html">OS User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../network/docs/index.html">BLE User Guide</a></li>
+            <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../decawave/decawave.html">Decawave-UWB User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../newt/index.html">Newt Tool Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../newtmgr/index.html">Newt Manager Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mynewt_faq/index.html">Mynewt FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">Appendix</a></li>
 </ul>
 
         
@@ -296,7 +262,7 @@ reduce the number of resources that need to be shared and locked.</p>
 interrupt context is that other interrupts and high priority tasks are
 not blocked waiting for the interrupt handler to complete processing. A
 task can also access other OS facilities and sleep.</p>
-<p>This tutorial assumes that you have read about <a class="reference internal" href="../../os/core_os/event_queue/event_queue.html"><span class="doc">Event Queues</span></a>, the <a class="reference internal" href="../../os/modules/hal/hal.html"><span class="doc">Hardware Abstraction Layer</span></a>, and <a class="reference internal" href="../../os/core_os/callout/callout.html"><span class="doc">OS Callouts</span></a> in the OS User’s Guide.</p>
+<p>This tutorial assumes that you have read about <span class="xref std std-doc">Event Queues</span>, the <span class="xref std std-doc">Hardware Abstraction Layer</span>, and <span class="xref std std-doc">OS Callouts</span> in the OS User’s Guide.</p>
 <p>This tutorial shows you how to create an application that uses events
 for:</p>
 <ul class="simple">
@@ -785,15 +751,6 @@ Button 1.</p>
                    </div>
                   </div>
                   
-    <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
-      
-        <a href="tasks_lesson.html" class="btn btn-neutral float-right" title="Tasks and Priority Management" accesskey="n">Next: Tasks and Priority Management <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="os_fundamentals.html" class="btn btn-neutral" title="OS Fundamentals" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous: OS Fundamentals</a>
-      
-    </div>
-
                 </div>
               </div>
             </div>

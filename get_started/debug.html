@@ -40,10 +40,7 @@
           <link rel="index" title="Index"
                 href="../genindex.html"/>
           <link rel="search" title="Search" href="../search.html"/>
-      <link rel="top" title="Apache Mynewt latest documentation" href="../index.html"/>
-          <link rel="up" title="Setup &amp; Get Started" href="index.html"/>
-          <link rel="next" title="Concepts" href="../concepts.html"/>
-          <link rel="prev" title="Using the Serial Port with Mynewt OS" href="serial_access.html"/> 
+      <link rel="top" title="Apache Mynewt latest documentation" href="../index.html"/> 
 
     
     <script src="../_static/js/modernizr.min.js"></script>
@@ -154,8 +151,6 @@ ga("send", "pageview");
   <div class="container">
     <a href="/documentation/">Docs</a> /
     
-      <a href="index.html">Setup &amp; Get Started</a> /
-    
     Debugging Mynewt
     
   <div class="sourcelink">
@@ -217,26 +212,8 @@ ga("send", "pageview");
       
         
         
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Setup &amp; Get Started</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="native_install/index.html">Native Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker Container</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project_create.html">Create Your First Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="serial_access.html">Serial Port Setup</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Debugging Mynewt</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts.html">Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../external_links.html">Third-party Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../os/os_user_guide.html">OS User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../network/docs/index.html">BLE User Guide</a></li>
+            <ul>
 <li class="toctree-l1"><a class="reference internal" href="../decawave/decawave.html">Decawave-UWB User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../newt/index.html">Newt Tool Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../newtmgr/index.html">Newt Manager Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mynewt_faq/index.html">Mynewt FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Appendix</a></li>
 </ul>
 
         
@@ -285,10 +262,10 @@ either of the following newt commands:</p>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">newt</span> <span class="pre">debug</span></code> command will start the debugger for the specified target. That target
 should be running on the device you are debugging on. For more information on the command, take a look at
-the <a class="reference internal" href="../newt/command_list/newt_debug.html"><span class="doc">command structure in the Newt Tool Guide</span></a>.</p>
+the <span class="xref std std-doc">command structure in the Newt Tool Guide</span>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">newt</span> <span class="pre">run</span></code> command also starts the debugger, but will also build the target, create
 an image with the specified version number, and load it onto the board. More details on its usage and syntax are
-on the <a class="reference internal" href="../newt/command_list/newt_run.html"><span class="doc">Newt Tool command guide</span></a>.</p>
+on the <span class="xref std std-doc">Newt Tool command guide</span>.</p>
 <p>Starting the debugger will bring up the GDB session in the console:</p>
 <pre class="code console literal-block">
 <span class="generic output">~/test/1.5 $ newt debug pca40blinky
@@ -323,15 +300,6 @@ at repos/apache-mynewt-core/hw/mcu/nordic/nrf52xxx/src/hal_os_tick.c:164
                    </div>
                   </div>
                   
-    <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
-      
-        <a href="../concepts.html" class="btn btn-neutral float-right" title="Concepts" accesskey="n">Next: Concepts <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="serial_access.html" class="btn btn-neutral" title="Using the Serial Port with Mynewt OS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous: Using the Serial Port with Mynewt OS</a>
-      
-    </div>
-
                 </div>
               </div>
             </div>

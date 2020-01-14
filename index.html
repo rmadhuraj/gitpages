@@ -41,7 +41,7 @@
                 href="genindex.html"/>
           <link rel="search" title="Search" href="search.html"/>
       <link rel="top" title="Apache Mynewt latest documentation" href="#"/>
-          <link rel="next" title="Setup &amp; Get Started" href="get_started/index.html"/> 
+          <link rel="next" title="Decawave-UWB User Guide" href="decawave/decawave.html"/> 
 
     
     <script src="_static/js/modernizr.min.js"></script>
@@ -213,19 +213,8 @@ ga("send", "pageview");
       
         
         
-            <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_started/index.html">Setup &amp; Get Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="external_links.html">Third-party Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="os/os_user_guide.html">OS User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network/docs/index.html">BLE User Guide</a></li>
+            <ul>
 <li class="toctree-l1"><a class="reference internal" href="decawave/decawave.html">Decawave-UWB User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="newt/index.html">Newt Tool Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="newtmgr/index.html">Newt Manager Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mynewt_faq/index.html">Mynewt FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="misc/index.html">Appendix</a></li>
 </ul>
 
         
@@ -250,71 +239,8 @@ ga("send", "pageview");
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="welcome-to-apache-mynewt">
-<h2>Welcome to Apache Mynewt<a class="headerlink" href="#welcome-to-apache-mynewt" title="Permalink to this headline">¶</a></h2>
-<p>Apache Mynewt is an operating system that makes it easy to develop
-applications for microcontroller environments where power and cost are
-driving factors. Examples of these devices are connected locks, lights,
-and wearables.</p>
-<p>Microcontroller environments have a number of characteristics that makes
-the operating system requirements for them unique:</p>
-<ul class="simple">
-<li>Low memory footprint: memory on these systems range from 8-16KB (on
-the low end) to 16MB (on the high end).</li>
-<li>Reduced code size: code often runs out of flash, and total available
-code size ranges from 64-128KB to 16-32MB.</li>
-<li>Low processing speed: processor speeds vary from 10-12MHz to
-160-200MHz.</li>
-<li>Low power operation: devices operate in mostly sleeping mode, in
-order to conserve battery power and maximize power usage.</li>
-</ul>
-<p>As more and more devices get connected, these interconnected devices
-perform complex tasks. To perform these tasks, you need low-level
-operational functionality built into the operating system. Typically,
-connected devices built with these microcontrollers perform a myriad of
-functions:</p>
-<ul class="simple">
-<li>Networking Stacks: Bluetooth Low Energy and Thread</li>
-<li>Peripherals: PWM to drive motors, ADCs to measure sensor data, and
-RTCs to keep time.</li>
-<li>Scheduled Processing: actions must happen on a calendared or periodic
-basis.</li>
-</ul>
-<p>Apache Mynewt accomplishes all the above easily, by providing a complete
-operating system for constrained devices, including:</p>
-<ul class="simple">
-<li>A fully open-source Bluetooth Low Energy stack with both Host and
-Controller implementations.</li>
-<li>A pre-emptive, multi-tasking Real Time operating system kernel</li>
-<li>A Hardware Abstraction Layer (HAL) that abstracts the MCU’s
-peripheral functions, allowing developers to easily write
-cross-platform code.</li>
-</ul>
-</div>
-<div class="section" id="newt">
-<h2>Newt<a class="headerlink" href="#newt" title="Permalink to this headline">¶</a></h2>
-<p>In order to provide all this functionality, and operate in an extremely
-low resource environment, Mynewt provides a very fine-grained source
-package management and build system tool, called <em>newt</em>.</p>
-<p>You can install <em>newt</em> for <a class="reference internal" href="newt/install/newt_mac.html"><span class="doc">Mac OS</span></a>,
-<a class="reference internal" href="newt/install/newt_linux.html"><span class="doc">Linux</span></a>, or
-<a class="reference internal" href="newt/install/newt_windows.html"><span class="doc">Windows</span></a>.</p>
-</div>
-<div class="section" id="newt-manager">
-<h2>Newt Manager<a class="headerlink" href="#newt-manager" title="Permalink to this headline">¶</a></h2>
-<p>In order to enable a user to communicate with remote instances of Mynewt
-OS and query, configure, and operate them, Mynewt provides an
-application tool called Newt Manager or <em>newtmgr</em>.</p>
-<p>You can install <em>newtmgr</em> for <a class="reference internal" href="newtmgr/install/install_mac.html"><span class="doc">Mac OS</span></a>,
-<a class="reference internal" href="newtmgr/install/install_linux.html"><span class="doc">Linux</span></a>, or
-<a class="reference internal" href="newtmgr/install/install_windows.html"><span class="doc">Windows</span></a>.</p>
-</div>
-<div class="section" id="build-your-first-mynewt-app-with-newt">
-<h2>Build your first Mynewt App with Newt<a class="headerlink" href="#build-your-first-mynewt-app-with-newt" title="Permalink to this headline">¶</a></h2>
-<p>With the introductions out of the way, now is a good time to <a class="reference internal" href="get_started/index.html"><span class="doc">get set up
-and started</span></a> with your first Mynewt
-application.</p>
-<p>Happy Hacking!</p>
+<div class="section" id="decwave-uwb-user-guide">
+<h2>Decwave UWB user guide<a class="headerlink" href="#decwave-uwb-user-guide" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -324,7 +250,7 @@ application.</p>
                   
     <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
       
-        <a href="get_started/index.html" class="btn btn-neutral float-right" title="Setup &amp; Get Started" accesskey="n">Next: Setup &amp; Get Started <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="decawave/decawave.html" class="btn btn-neutral float-right" title="Decawave-UWB User Guide" accesskey="n">Next: Decawave-UWB User Guide <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
