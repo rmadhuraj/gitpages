@@ -1,6 +1,0 @@
-Introduction
-=================
-Overview
-````````````
-UWB is a ultra wide band technology. Decawave chips were operated in UWB.
-uwb-core consists of drivers required for uwb-apps.

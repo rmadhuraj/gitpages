@@ -1,6 +1,0 @@
-uwb
-=====
-
-uwb drivers
-```````````````````
-Consists of IEEE 802.15.4 standard formats for UWB(Ultra Wide Band) based communication.
